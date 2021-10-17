@@ -13404,10 +13404,7 @@ button.rec-dot:focus {
     width: 50px;
   }
 
-  .search-input {
-    width: 170px;
-    align-items: right;
-  }
+  /* footer input */ 
   .footer_link {
     color: initial;
     text-decoration: underline;
@@ -13427,9 +13424,7 @@ button.rec-dot:focus {
     height: 28px;
     background-color: #00bfcb;
   }
-  /* .row{
-    margin-left: -223px;
-  } */
+
   #mainNav .navbar-toggler {
     display: none;
   }
