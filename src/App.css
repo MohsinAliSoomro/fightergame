@@ -13001,12 +13001,12 @@ button.rec-dot:focus {
     width: 80%;
     margin-left: 10px;
     padding-bottom: 2px;
-}
- 
+  }
+
   /* .items{
     display: none;
   } */
-  
+
   .taille_titre {
     font-size: 3rem;
     display: none;
@@ -13023,23 +13023,23 @@ button.rec-dot:focus {
     margin-right: -18px;
   }
 
-    /* footer coding section */
-      /* footer coding section */
-      .sm-show {
-        display: flex;
-      }
-      .sm-hide {
-        display: none;
-      }
+  /* footer coding section */
+  /* footer coding section */
+  .sm-show {
+    display: flex;
+  }
+  .sm-hide {
+    display: none;
+  }
 
-      .sm-heading {
-        font-size: 15px !important;
-      }
-      .sm-heading > ul > li {
-        font-size: 10px;
-      }
-    
-      .sm-footer > * {
+  .sm-heading {
+    font-size: 15px !important;
+  }
+  .sm-heading > ul > li {
+    font-size: 10px;
+  }
+
+  .sm-footer > * {
     text-align: left !important;
   }
   .sm-footer {
@@ -13053,7 +13053,7 @@ button.rec-dot:focus {
   }
 
   /* footer coding section */
- 
+
   .Faceles {
     font-size: 20px;
   }
@@ -13074,7 +13074,7 @@ button.rec-dot:focus {
   .cartext-one {
     padding-left: 108px;
   }
- 
+
   .texte {
     width: 205px;
     height: 127px;
@@ -13241,8 +13241,6 @@ button.rec-dot:focus {
     width: 169px;
   }
 
-
-
   .telegram-icon {
     display: flex;
     border: none;
@@ -13281,7 +13279,7 @@ button.rec-dot:focus {
     font-weight: 700;
     line-height: 17px;
   }
- 
+
   */ .taille12 {
     font-weight: lighter;
     font-size: 14px;
@@ -13339,7 +13337,8 @@ button.rec-dot:focus {
     height: 40px;
     width: 143px;
   }
-  
+  /* footer para */
+
   .footer-dark .item.text p {
     display: none;
   }
@@ -13356,6 +13355,9 @@ button.rec-dot:focus {
   .footer-dark .copyright {
     display: none;
   }
+
+  /* footer end */
+
   .fond_12 {
     padding-bottom: 0px;
   }
@@ -13365,6 +13367,8 @@ button.rec-dot:focus {
     top: 13px;
     right: 5%;
   }
+
+  /* footer dark */
   .footer-dark h3 {
     margin-top: 15px;
   }
@@ -13404,11 +13408,13 @@ button.rec-dot:focus {
     display: flex;
     margin-left: 32px;
   }
+
+  /* footer social end */
   .navbar-toggler {
     width: 50px;
   }
 
-  /* footer input */ 
+  /* footer input */
   .footer_link {
     color: initial;
     text-decoration: underline;
@@ -13478,30 +13484,26 @@ button.rec-dot:focus {
     font-weight: lighter;
     font-size: 14px;
     text-transform: capitalize;
-}
-.sm-text-hide{
-  display: none;
-}
-.Readmore-Text{
-  font-size: 14px;
-  color:  #09E1FF;
-}
-.arrow{
-  width: 13px;
-  height: 20px;
-  color: #09E1FF;
-}
-  .arrow-btn{
+  }
+  .sm-text-hide {
+    display: none;
+  }
+  .Readmore-Text {
+    font-size: 14px;
+    color: #09e1ff;
+  }
+  .arrow {
+    width: 13px;
+    height: 20px;
+    color: #09e1ff;
+  }
+  .arrow-btn {
     border-radius: 40px;
     box-sizing: border-box;
     background: transparent;
-    border: 2px solid #FFFFFF;
+    border: 2px solid #ffffff;
     border-radius: 50.5px;
     width: 30px;
     height: 40px;
   }
-}
-
-/* Medium screen devices (768px and above) */
-@media only screen and (ma-width: 768px) {
 }
