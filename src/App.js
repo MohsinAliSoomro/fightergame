@@ -3,9 +3,15 @@ import "react-bootstrap";
 import React, { useState, useEffect } from "react";
 import Clock from "./Clock";
 import Carousel from "react-elastic-carousel";
-
+import telegram from "./telegram.png";
 const breakPoints = [
   { width: 1, itemsToShow: 3 },
+  // { width: 550, itemsToShow: 3, itemsToScroll: 2 },
+  // { width: 768, itemsToShow: 3 },
+  // { width: 1200, itemsToShow: 3 }
+];
+const breakPoints2 = [
+  { width: 1, itemsToShow: 1 },
   // { width: 550, itemsToShow: 3, itemsToScroll: 2 },
   // { width: 768, itemsToShow: 3 },
   // { width: 1200, itemsToShow: 3 }
@@ -27,6 +33,7 @@ function App() {
   const [timerMinutes, setTimerMinutes] = useState();
   const [timerSeconds, setTimerSeconds] = useState();
   const [roadMapText, setRoadMapText] = useState(1);
+  const [navbar, setNavbar] = useState(false);
   let interval;
 
   const startTimer = () => {
@@ -137,7 +144,11 @@ function App() {
       </head>
       <body id="page-top">
         {/* <!-- Navigation--> */}
-        <div className="hamburger" id="mainNav">
+        <div
+          onClick={() => setNavbar(!navbar)}
+          className="hamburger"
+          id="mainNav"
+        >
           <i class="fas fa-bars"></i>
         </div>
         <nav class="navbar-expand-lg navbar-dark" id="mainNav">
@@ -230,16 +241,29 @@ function App() {
                   game!
                 </p>
               </div>
+              
               <div class="padd">
                 <a
-                  class="btn btn-primary btn-xl  m-3 text-uppercase flottes padding_case"
+                  class="btn btn-primary btn-xl m-3 text-uppercase flottes padding_case"
                   href="#Roadmap"
                 >
                   <span>become a Faceless Fighter</span>
                 </a>
               </div>
+             
+              
             </div>
+           
           </header>
+          <div>
+            <button className="arrow-btn-down">
+            <a style={{color:'white'}}
+                  href="#Roadmap"
+                >
+            <i class="fas fa-long-arrow-alt-down" style={{marginTop:"10px"}}></i>
+            </a>
+            </button>
+            </div>
           {/* <!-- Services--> */}
           {/* <div class ="fond_1 flex"/> */}
           <section class=" " id="About">
@@ -277,7 +301,7 @@ function App() {
               </div>
             </div>
           </section>
-          <section className="fondall">
+          <section className="fondall mobile-view">
             <div className="carousel-wrapper mobile-view">
               <Carousel breakPoints={breakPoints}>
                 {items.map((item) => (
@@ -326,116 +350,237 @@ function App() {
                   with NFTs instead of game pieces or cards!{" "}
                 </p>
               </div>
-              <div class="containere">
-                <div class="card">
-                  <div class="image image1">
-                    <div class="tail flex tests">
-                      <div
-                        class="m-3 card-align "
-                        style={{ "text-transform": "uppercase" }}
-                      >
-                        <span class="white color_blue card_text">
-                          Your Faceless{" "}
-                        </span>
-                        <span
-                          class="white card_text"
-                          style={{ "padding-left": "130px" }}
+              <div class="containere desktop-view">
+                <Carousel breakPoints={breakPoints}>
+                  <div class="card">
+                    <div class="image image1">
+                      <div class="tail flex tests">
+                        <div
+                          class="m-3 card-align "
+                          style={{ "text-transform": "uppercase" }}
                         >
-                          Fighters
-                        </span>
-                      </div>
-                      <div class="flottes">
-                        <span class="white">Your Faceless Fighters are </span>
-                        <span class="color_blue">10,000 unique</span>
-                        <span class="white">
-                          , fully trained, ready to compete, visually stunning
-                        </span>
-                        <span class="color_blue"> NFTs</span>
-                        <span class="white">
-                          . Masters in strategic battle, each comes with expert
-                          fighting skills and weapons designed to confront,
-                          attack, & defeat opponents.{" "}
-                        </span>
-                        <br />
+                          <span class="white color_blue card_text">
+                            Your Faceless{" "}
+                          </span>
+                          <span
+                            class="white card_text"
+                            style={{ "padding-left": "30px" }}
+                          >
+                            Fighters
+                          </span>
+                        </div>
+                        <div class="flottes">
+                          <span class="white">Your Faceless Fighters are </span>
+                          <span class="color_blue">10,000 unique</span>
+                          <span class="white">
+                            , fully trained, ready to compete, visually stunning
+                          </span>
+                          <span class="color_blue"> NFTs</span>
+                          <span class="white">
+                            . Masters in strategic battle, each comes with
+                            expert fighting skills and weapons designed to
+                            confront, attack, & defeat opponents.{" "}
+                          </span>
+                          <br />
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div class="card">
-                  <div class="image image2">
-                    <div class="tail flex tests">
-                      <div
-                        class="m-3 card-align"
-                        style={{ "text-transform": "uppercase" }}
-                      >
-                        <span class="white color_blue card_text ">
-                          Your play{" "}
-                        </span>
-                        <span
-                          class="white card_text "
-                          style={{ "padding-left": "100px" }}
+                  <div class="card">
+                    <div class="image image2">
+                      <div class="tail flex tests">
+                        <div
+                          class="m-3 card-align"
+                          style={{ "text-transform": "uppercase" }}
                         >
-                          Arena
-                        </span>
-                      </div>
-                      <div class="flottes">
-                        <span class="white">
-                          Your play arena is hosted on a high-powered app. Once
-                          you purchase a Faceless Fighter NFT, you will be able
-                          to access the app and
-                        </span>
-                        <span class="color_blue">
-                          {" "}
-                          enter any competition or tournament.
-                        </span>
-                        <span class="white">
-                          With each successful game played, you will{" "}
-                        </span>
-                        <span class="color_blue">win tokens</span>
-                        <span class="white">
-                          {" "}
-                          that can be used in the game.
-                        </span>
+                          <span class="white color_blue card_text ">
+                            Your play{" "}
+                          </span>
+                          <span
+                            class="white card_text "
+                            style={{ "padding-left": "30px" }}
+                          >
+                            Arena
+                          </span>
+                        </div>
+                        <div class="flottes">
+                          <span class="white">
+                            Your play arena is hosted on a high-powered app.
+                            Once you purchase a Faceless Fighter NFT, you will
+                            be able to access the app and
+                          </span>
+                          <span class="color_blue">
+                            {" "}
+                            enter any competition or tournament.
+                          </span>
+                          <span class="white">
+                            With each successful game played, you will{" "}
+                          </span>
+                          <span class="color_blue">win tokens</span>
+                          <span class="white">
+                            {" "}
+                            that can be used in the game.
+                          </span>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div class="card">
-                  <div class="image image3">
-                    <div class="tail flex tests">
-                      <div
-                        class="m-3 card-align"
-                        style={{ "text-transform": "uppercase" }}
-                      >
-                        <span class="white color_blue card_text">
-                          Your fight{" "}
-                        </span>
-                        <span
-                          class="white card_text "
-                          style={{ "padding-left": "130px" }}
+                  <div class="card">
+                    <div class="image image3">
+                      <div class="tail flex tests">
+                        <div
+                          class="m-3 card-align"
+                          style={{ "text-transform": "uppercase" }}
                         >
-                          Ranks
-                        </span>
-                      </div>
-                      <div class="flottes">
-                        <span class="white">Your fight</span>
-                        <span class="color_blue">
-                          {" "}
-                          rank will be displayed on tables.{" "}
-                        </span>
-                        <span class="white">
-                          so that you can bask in your glory and others in this
-                          exclusive, VIP fight club can challenge you. The
-                          higher your rank, the higher your fighter’s level and
-                          skill, as well as{" "}
-                        </span>
-                        <span class="color_blue"> point and coin earnings</span>
-                        <br />
+                          <span class="white color_blue card_text">
+                            Your fight{" "}
+                          </span>
+                          <span
+                            class="white card_text "
+                            style={{ "padding-left": "30px" }}
+                          >
+                            Ranks
+                          </span>
+                        </div>
+                        <div class="flottes">
+                          <span class="white">Your fight</span>
+                          <span class="color_blue">
+                            {" "}
+                            rank will be displayed on tables.{" "}
+                          </span>
+                          <span class="white">
+                            so that you can bask in your glory and others in
+                            this exclusive, VIP fight club can challenge you.
+                            The higher your rank, the higher your fighter’s
+                            level and skill, as well as{" "}
+                          </span>
+                          <span class="color_blue">
+                            {" "}
+                            point and coin earnings
+                          </span>
+                          <br />
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
+                </Carousel>
               </div>
+              <div class="containere mobile-view">
+                <Carousel breakPoints={breakPoints2}>
+                  <div class="card">
+                    <div class="image image1">
+                      <div class="tail flex tests">
+                        <div
+                          class="m-3 card-align "
+                          style={{ "text-transform": "uppercase" }}
+                        >
+                          <span class="white color_blue card_text">
+                            Your Faceless{" "}
+                          </span>
+                          <span
+                            class="white card_text"
+                            style={{ "padding-left": "130px" }}
+                          >
+                            Fighters
+                          </span>
+                        </div>
+                        <div class="flottes">
+                          <span class="white">Your Faceless Fighters are </span>
+                          <span class="color_blue">10,000 unique</span>
+                          <span class="white">
+                            , fully trained, ready to compete, visually stunning
+                          </span>
+                          <span class="color_blue"> NFTs</span>
+                          <span class="white">
+                            . Masters in strategic battle, each comes with
+                            expert fighting skills and weapons designed to
+                            confront, attack, & defeat opponents.{" "}
+                          </span>
+                          <br />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="image image2">
+                      <div class="tail flex tests">
+                        <div
+                          class="m-3 card-align"
+                          style={{ "text-transform": "uppercase" }}
+                        >
+                          <span class="white color_blue card_text ">
+                            Your play{" "}
+                          </span>
+                          <span
+                            class="white card_text "
+                            style={{ "padding-left": "100px" }}
+                          >
+                            Arena
+                          </span>
+                        </div>
+                        <div class="flottes">
+                          <span class="white">
+                            Your play arena is hosted on a high-powered app.
+                            Once you purchase a Faceless Fighter NFT, you will
+                            be able to access the app and
+                          </span>
+                          <span class="color_blue">
+                            {" "}
+                            enter any competition or tournament.
+                          </span>
+                          <span class="white">
+                            With each successful game played, you will{" "}
+                          </span>
+                          <span class="color_blue">win tokens</span>
+                          <span class="white">
+                            {" "}
+                            that can be used in the game.
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="image image3">
+                      <div class="tail flex tests">
+                        <div
+                          class="m-3 card-align"
+                          style={{ "text-transform": "uppercase" }}
+                        >
+                          <span class="white color_blue card_text">
+                            Your fight{" "}
+                          </span>
+                          <span
+                            class="white card_text "
+                            style={{ "padding-left": "130px" }}
+                          >
+                            Ranks
+                          </span>
+                        </div>
+                        <div class="flottes">
+                          <span class="white">Your fight</span>
+                          <span class="color_blue">
+                            {" "}
+                            rank will be displayed on tables.{" "}
+                          </span>
+                          <span class="white">
+                            so that you can bask in your glory and others in
+                            this exclusive, VIP fight club can challenge you.
+                            The higher your rank, the higher your fighter’s
+                            level and skill, as well as{" "}
+                          </span>
+                          <span class="color_blue">
+                            {" "}
+                            point and coin earnings
+                          </span>
+                          <br />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </Carousel>
+              </div>
+
               <div class="fit">
                 <h3
                   class="section-subheading-fit white"
@@ -843,37 +988,77 @@ function App() {
               <img class="vector" src="./assets/Vector-Right.png" alt="" />
             </div>
             <div class="container navbar-dark">
-              <div class="containere m-2 bottom3">
-                <div class="cards">
-                  <div class="image image1"></div>
-                  <span class="color_blue taille2">Ganondorf:</span>
-                  <br />
-                  <span class="white taille2">Ring Leader aka the owner.</span>
-                </div>
-                <div class="cards">
-                  <div class="image image2"></div>
-                  <span class="color_blue taille2">Rudolf: </span>
-                  <br />
-                  <span class="white taille2">
-                    Chief Of Fighters aka the chief of staff.
-                  </span>
-                </div>
-                <div class="cards">
-                  <div class="image image3"></div>
-                  <span class="color_blue taille2">Gundolf:</span>
-                  <br />
-                  <span class="white taille2">
-                    Technical Fight Coach aka the tech guy.
-                  </span>
-                </div>
-                <div class="cards">
-                  <div class="image image1"></div>
-                  <span class="color_blue taille2">Ingolf:</span>
-                  <br />
-                  <span class="white taille2">
-                    Fight Director aka the art director.
-                  </span>
-                </div>
+              <div class="containere m-2 bottom3 desktop-view">
+                <Carousel breakPoints={breakPoints}>
+                  <div class="cards">
+                    <div class="image image1"></div>
+                    <span class="color_blue taille2">Ganondorf:</span>
+                    <br />
+                    <span class="white taille2">
+                      Ring Leader aka the owner.
+                    </span>
+                  </div>
+                  <div class="cards">
+                    <div class="image image2"></div>
+                    <span class="color_blue taille2">Rudolf: </span>
+                    <br />
+                    <span class="white taille2">
+                      Chief Of Fighters aka the chief of staff.
+                    </span>
+                  </div>
+                  <div class="cards">
+                    <div class="image image3"></div>
+                    <span class="color_blue taille2">Gundolf:</span>
+                    <br />
+                    <span class="white taille2">
+                      Technical Fight Coach aka the tech guy.
+                    </span>
+                  </div>
+                  <div class="cards">
+                    <div class="image image1"></div>
+                    <span class="color_blue taille2">Ingolf:</span>
+                    <br />
+                    <span class="white taille2">
+                      Fight Director aka the art director.
+                    </span>
+                  </div>
+                </Carousel>
+              </div>
+              <div class="containere m-2 bottom3 mobile-view">
+                <Carousel breakPoints={breakPoints2}>
+                  <div class="cards">
+                    <div class="image image1"></div>
+                    <span class="color_blue taille2">Ganondorf:</span>
+                    <br />
+                    <span class="white taille2">
+                      Ring Leader aka the owner.
+                    </span>
+                  </div>
+                  <div class="cards">
+                    <div class="image image2"></div>
+                    <span class="color_blue taille2">Rudolf: </span>
+                    <br />
+                    <span class="white taille2">
+                      Chief Of Fighters aka the chief of staff.
+                    </span>
+                  </div>
+                  <div class="cards">
+                    <div class="image image3"></div>
+                    <span class="color_blue taille2">Gundolf:</span>
+                    <br />
+                    <span class="white taille2">
+                      Technical Fight Coach aka the tech guy.
+                    </span>
+                  </div>
+                  <div class="cards">
+                    <div class="image image1"></div>
+                    <span class="color_blue taille2">Ingolf:</span>
+                    <br />
+                    <span class="white taille2">
+                      Fight Director aka the art director.
+                    </span>
+                  </div>
+                </Carousel>
               </div>
             </div>
           </section>
@@ -897,37 +1082,46 @@ function App() {
             <div class="container">
               <div class="row">
                 <div className="col md-6 sm-6 lg-6">
-                  <input type="search" className="search-input" />
-                  <button className="search-btn">
-                    <i class="fab fa-telegram"></i>
-                  </button>
+                  <div className="search-ctr">
+                    <input type="search" className="search-input" />
+                    <img
+                      src={telegram}
+                      onClick={() => {
+                        alert("working");
+                      }}
+                      className="search-btn"
+                      alt="search-icon"
+                    />
+                  </div>
                 </div>
                 <div className="col md-6 sm-6 lg-6 sm-social text-right flex sm-col">
-                  <a className="footer_links">
-                    <div className="social-icons-placement">
-                      <i class="icon ion-social-facebook"></i>
-                    </div>
-                  </a>
-                  <a className="footer_links">
-                    <div className="social-icons-placement">
-                      <i class="icon ion-social-twitter"></i>
-                    </div>
-                  </a>
-                  <a className="footer_links">
-                    <div className="social-icons-placement">
-                      <i class="icon ion-social-whatsapp"></i>
-                    </div>
-                  </a>
-                  <a className="footer_links">
-                    <div className="social-icons-placement">
-                      <i class="icon ion-social-instagram"></i>
-                    </div>
-                  </a>
+                  <div className="social-container">
+                    <a className="footer_links">
+                      <div className="social-icons-placement">
+                        <i class="icon ion-social-facebook"></i>
+                      </div>
+                    </a>
+                    <a className="footer_links">
+                      <div className="social-icons-placement">
+                        <i class="icon ion-social-twitter"></i>
+                      </div>
+                    </a>
+                    <a className="footer_links">
+                      <div className="social-icons-placement">
+                        <i class="icon ion-social-whatsapp"></i>
+                      </div>
+                    </a>
+                    <a className="footer_links">
+                      <div className="social-icons-placement">
+                        <i class="icon ion-social-instagram"></i>
+                      </div>
+                    </a>
+                  </div>
                 </div>
               </div>
               <div class="row sm-footer">
                 <div class="col-sm-4 col-md-3 item sm-col">
-                  <h3>Services</h3>
+                  <h3 className="sm-heading">Services</h3>
                   <ul>
                     <li>
                       <a href="#">How to order</a>
@@ -944,27 +1138,31 @@ function App() {
                   </ul>
                 </div>
                 <div class="col-sm-4 col-md-3 item">
-                  <h3>About</h3>
-                  <ul>
-                    <li>
-                      <a href="#">History</a>
-                    </li>
-                    <li>
-                      <a href="#">our team</a>
-                    </li>
-                    <li>
-                      <a href="#">Brand guidelines</a>
-                    </li>
-                    <li>
-                      <a href="#">Terms & Condition</a>
-                    </li>
-                    <li>
-                      <a href="#">Privacy Policy</a>
-                    </li>
-                  </ul>
+                  <div className="about-size">
+                    <h3 className="sm-heading">About</h3>
+                    <ul>
+                      <li>
+                        <a href="#">History</a>
+                      </li>
+                      <li>
+                        <a href="#">our team</a>
+                      </li>
+                      <li>
+                        <a href="#">Brand guidelines</a>
+                      </li>
+                      <li>
+                        <a href="#">Terms & Condition</a>
+                      </li>
+                      <li>
+                        <a href="#">Privacy Policy</a>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
-                <div class="col-sm-4 col-md-6 item text sm-col">
-                  <h3>Faceless Fighters</h3>
+                <div class="col-sm-4 col-md-6 item text faceless_class sm-col">
+                  <h3 className="fighter__color face-color">
+                    Faceless <span className="faceless_color">Fighters</span>{" "}
+                  </h3>
                   <p>
                     Praesent sed lobortis mi.Suspendisse vel placerat
                     ligula.Vivamus ac sem lacus.Ut vehicula rhoncus
@@ -1352,7 +1550,47 @@ function App() {
             </div>
           </div>
         </div>
-
+        {navbar && (
+          <div className="custom-navbar">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="#About">
+                  Game
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#mint">
+                  Fights
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#Roadmap">
+                  Vip Club
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#team">
+                  Play Arena
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact">
+                  rule
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#team">
+                  Roadmap
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" style={{ color: "red" }} href="#contact">
+                  Team
+                </a>
+              </li>
+            </ul>
+          </div>
+        )}
         <div></div>
         {/* <!-- Bootstrap core JS--> */}
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
