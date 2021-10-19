@@ -156,11 +156,11 @@ function App() {
                             <div class="masthead-heading texte"><p class="texte m-5">Faceless Fighters is an extraordinary collection of 10,000 fighter NFTs secured on the Ethereum blockchain. Once
                                 you buy an NFT, you get special access to a next-generation, truly exhilarating, live, multiplayer,
                                 battle-style, play-to-earn game!</p></div>
-                            <div class="padd"><a class="btn btn-primary btn-xl  m-3 text-uppercase flottes padding_case" href="#Roadmap">
-                                <span>become a Faceless Fighter</span></a></div>
+                            <div class="padd"><a class="btn btn-primary  btn-xl  m-3 text-uppercase flottes padding_case" href="#Roadmap">
+                                <span className="become-btn">become a Faceless Fighter</span></a></div>
                             <div className="arrowshow">
                                 <button className="arrow-btn"><i class="arrow fal fa-arrow-down"></i></button>
-                            </div>sm
+                            </div>
                         </div>
                     </header>
                     {/* <!-- Services--> */}
@@ -182,7 +182,7 @@ function App() {
                                     <span>Ready. Set… let’s play.</span>
                                 </div>
                                 <div class="pad1">
-                                    <a class="btn mint_btn btn-primary btn-xl m-3 text-uppercase">
+                                    <a class="miniti-btn btn mint_btn btn-primary btn-xl m-3 text-uppercase">
                                         <span>Mint your Faceless Fighter</span></a>
                                 </div>
                             </div>
